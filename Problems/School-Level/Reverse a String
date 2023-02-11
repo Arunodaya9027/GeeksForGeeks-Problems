@@ -1,0 +1,13 @@
+
+
+class Solution {
+    static String revStr(String S) {
+        // code here
+        /*char[] arr=new char[S.length()];*/
+        String res="";
+        for(int i=0; i<S.length(); i++){
+            res=res+S.charAt(S.length()-i-1);
+        }
+        return res;
+    }
+}
