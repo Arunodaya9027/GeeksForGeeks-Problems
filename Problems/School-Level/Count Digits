@@ -1,0 +1,21 @@
+
+
+//User function Template for Java
+
+
+class Solution{
+    static int evenlyDivides(int N){
+        // code here
+        int count=0;
+        int i=N;
+        while(i>0){
+            int temp=i%10;
+            try{
+                int rem=N%temp;
+                if(rem==0)  count++;
+            } catch(Exception e){}
+            i=i/10;
+        }
+        return count;
+    }
+}
