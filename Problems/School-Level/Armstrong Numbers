@@ -1,0 +1,17 @@
+
+
+//User function Template for Java
+class Solution {
+    static String armstrongNumber(int n){
+        // code here
+        int sample=n;
+        int arm=0;
+        while(sample>0){
+            int temp=sample%10;
+            arm=arm+(int)Math.pow(temp,3);
+            sample/=10;
+        }
+        if(arm==n)  return "Yes";
+        else  return "No";
+    }
+}
