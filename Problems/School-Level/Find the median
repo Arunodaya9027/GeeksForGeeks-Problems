@@ -1,0 +1,19 @@
+
+
+//User function Template for Java
+
+class Solution
+{
+    public int find_median(int[] v)
+    {
+        // Code here
+        int med;
+        Arrays.sort(v);
+        if(v.length%2==0){
+            med=(v[v.length/2]+v[(v.length/2)-1])/2;
+        } else{
+            med=v[(v.length)/2];
+        }
+        return med;
+    }
+}
