@@ -1,0 +1,18 @@
+
+
+// User function template for Java
+
+class Solution {
+    static String conRevstr(String S1, String S2) {
+        // code here
+        S1=S1+S2;
+        char[] arr=S1.toCharArray();
+        int index=arr.length-1;
+        String final_s="";
+        while(index>=0){
+            final_s+=arr[index];
+            index--;
+        }
+        return final_s;
+    }
+}
