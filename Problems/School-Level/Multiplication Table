@@ -1,0 +1,15 @@
+
+
+//User function Template for Java
+class Solution{
+    static ArrayList<Integer> getTable(int N){
+        // code here
+        ArrayList<Integer> res= new ArrayList<Integer>();
+        int i=1;
+        while(i<=10){
+            res.add(N*i);
+            i++;
+        }
+        return res;
+    }
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
