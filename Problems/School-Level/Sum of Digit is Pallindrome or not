@@ -1,0 +1,26 @@
+
+
+// User function Template for Java
+
+class Solution {
+    int isDigitSumPalindrome(int N) {
+        // code here
+        int sum=0;
+        int num=N;
+        while(num>0){
+            int temp=num%10;
+            sum+=temp;
+            num/=10;
+        }
+        
+        int palin=0;
+        int sample=sum;
+        while(sample>0){
+            int temp=sample%10;
+            palin=palin*10+temp;
+            sample/=10;
+        }
+        if(palin==sum)  return 1;
+        else  return 0;
+    }
+}
