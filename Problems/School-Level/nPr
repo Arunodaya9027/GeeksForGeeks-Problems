@@ -1,0 +1,20 @@
+
+
+//User function Template for Java
+
+class Solution{
+    static long nPr(long n, long r){
+        // code here
+        long N=1, R=1;
+        long temp=n-r;
+        while(n>0){
+            N*=n;
+            n--;
+        }
+        while(temp>0){
+            R*=temp;
+            temp--;
+        }
+        return N/R;
+    }
+}
