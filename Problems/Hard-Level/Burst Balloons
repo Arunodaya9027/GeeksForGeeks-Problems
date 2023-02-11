@@ -1,0 +1,32 @@
+
+//User function Template for Java
+
+class Solution {
+  public static int maxCoins(int N, int[] arr) {
+    // code here
+    int[] brr = new int[N + 2];
+    brr[0] = brr[N + 1] = 1;
+          
+    for(int i = 1; i <= N; i++)
+        brr[i] = arr[i - 1];
+      
+    // Declaring DP array
+    int[][] dp = new int[N + 2][N + 2];
+      
+    for(int length = 1; length < N + 1; length++){
+        for(int left = 1; left < N - length + 2; left++) {
+            int right = left + length -1;
+              
+            // For a sub-array from indices
+            // left, right. This innermost
+            // loop finds the last balloon burst
+            for(int last = left; last < right + 1; last++) {
+                dp[left][right] = Math.max(dp[left][right], 
+                                  dp[left][last - 1] + brr[left - 1] * brr[last] * brr[right + 1] + dp[last + 1][right]);
+            }
+        }
+    }
+    return dp[1][N];
+  }
+}
+     
