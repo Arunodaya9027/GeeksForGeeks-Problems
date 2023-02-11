@@ -1,0 +1,12 @@
+class Solution {
+  public:
+    vector<int> cppOperators(int A, int B) {
+        // code here
+        std::vector<int> v;
+        v.push_back(A+B);
+        v.push_back(A*B);
+        v.push_back((A > B) ? A-B : B-A);
+        v.push_back((A > B) ? A/B : B/A);
+        return v;
+    }
+};
