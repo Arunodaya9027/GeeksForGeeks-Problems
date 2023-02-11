@@ -1,0 +1,17 @@
+
+//User function Template for Java
+
+
+class Solution {
+    ArrayList<Integer> valueEqualToIndex(int arr[], int n) {
+        // code here
+        ArrayList<Integer> res = new ArrayList<Integer>();
+        int k=0;
+        for(int j=0; j<n; j++){
+            if(arr[j]==j+1){
+                res.add(arr[j]);
+            }
+        }
+        return res;
+    }
+}
