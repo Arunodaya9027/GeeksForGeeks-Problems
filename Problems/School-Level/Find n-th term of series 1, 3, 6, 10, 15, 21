@@ -1,0 +1,15 @@
+
+
+//User function Template for Java
+
+class Solution {
+    static int findNthTerm(int N) {
+        // code here
+        int res=0, i=1;
+        while(i<=N){
+            res+=i;
+            i++;
+        }
+        return res;
+    }
+};
