@@ -1,0 +1,24 @@
+
+
+/*Complete the Function below*/
+class GfG
+{
+	public static int palinArray(int[] a, int n)
+           {
+                  //add code here.
+                  int sample, temp;
+                  for(int arr: a){
+                      sample=arr;
+                      int palin=0;
+                      while(sample>0){
+                        temp=sample%10;
+                        palin=palin*10+temp;
+                        sample/=10;
+                      }
+                      if(arr!=palin){
+                          return 0;
+                      }
+                  }
+                  return 1;
+           }
+}
